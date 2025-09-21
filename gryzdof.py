@@ -2,6 +2,8 @@
 from discord.ext import commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import random
+import os
+from discord.ext import commands
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -78,8 +80,7 @@ async def send_daily_message():
     last_message = chosen
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-client.run(TOKEN)
+bot.run(TOKEN)
 
-bot.run("DISCORD_TOKEN")
 
 
