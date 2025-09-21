@@ -1,4 +1,4 @@
-﻿import discord
+import discord
 from discord.ext import commands
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import random
@@ -6,6 +6,7 @@ import os
 from discord.ext import commands
 
 intents = discord.Intents.default()
+intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 messages = [
@@ -81,6 +82,3 @@ async def send_daily_message():
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 bot.run(TOKEN)
-
-
-
