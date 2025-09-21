@@ -77,8 +77,9 @@ async def send_daily_message():
     await channel.send(chosen)
     last_message = chosen
 
-TOKEN = os.getenv("MTQxOTEyMzM3OTI3MjgxNDc0NA.GquoUO.SajAxh-inWfZ2ChQKCCuT-OgRzH1QkcmWCyq7M")
+TOKEN = os.getenv("DISCORD_TOKEN")
 client.run(TOKEN)
 
-bot.run("MTQxOTEyMzM3OTI3MjgxNDc0NA.GquoUO.SajAxh-inWfZ2ChQKCCuT-OgRzH1QkcmWCyq7M")
+bot.run("DISCORD_TOKEN")
+
 
